@@ -107,6 +107,7 @@ class Game():
         self.screen.blit(text_surf, text_rect)
     
     def new_game(self):
+        blocks.empty()
         blockx = 16
         blocky = 0
         for i in range(3):
@@ -156,7 +157,7 @@ class Game():
         # Update sprites
         self.screen.fill(BLACK)
         all_sprites.update()
-        blocks.update()
+        #blocks.update()
         pygame.sprite.spritecollide(ball, blocks, True)
 
         # Draw to the screen
